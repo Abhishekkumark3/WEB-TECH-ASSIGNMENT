@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: cadetblue;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            background-color: blue;
+            margin: 10px 30px;
+        }
+
+        .box {
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid #6E0B29;
+            background-color: #b08cc5;
+        }
+
+        img{
+            height: 150px;
+            width: 150px;
+            margin: 5px 15px;
+            border-radius: 15px;
+        }
+
+        h2{
+            color: chartreuse;
+            margin-top: 25px;
+            padding-left: 15px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #b{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        #c{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        
+        #d{
+            display: flex;
+            flex-direction:column;
+            flex-wrap: nowrap;
+        }
+
+        #e{
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+        }
+
+        #f{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+
+        #g{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        #h{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            height: 250px;
+            align-items: center;
+        }
+
+        #i{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            height: 250px;
+            align-items: flex-end;
+        }
+
+        #j{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            flex-direction: column-reverse;
+        }
+
+        #k{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>FLEX</h1>
+
+    <h2>Without Flex</h2>
+    <div class="box" id="a">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLV2aov2ep7umQyt9sQ5lEa7ByOyPgf6BKwo4Yj8u6SrvaZhGZCHma96cdj_YmUNiUsPlZFrtiGkj2sAzANzYMa3YnuxEK5-h0RugkKyAUDgw3COybQsu0osEiLHCV17Xq9OAl42-g6txwJMBn_Gz5sG=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLXSjKXAxAbq5xCd0c_WyyNzx1u_xNOsPZD-u5UtSwnoyiA6Z9UPArQfniUHFx-CQYFLfB1pVqx_5UKuQviVmIXydLueeQVi61Q2rDo7dFAqZU6zyknkar5IliWEm4jcN8MxbbcqWS0Of32qhH1POS4H=w221-h228-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLWa5gIG278v5U1O6NrauKIAwB0XxeZ0DNGfrO0-p98klVmwH-nbubaMFpjL3n40z-yGAHJPYT1azq53Np5gH0z4poaukxa8XwIlJlQkAWA0fsBNebjdESL5FYyIl56-PsSn6cbP-_dTRhZqEG8PIMEv=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLX6oi9YYukvjZ8UWgnLu7_47IuqoeTpVs7zoGclR_jtoKcpKkUzJF72-RtCj3Ftr26vzRESiL2NrD1CV7X2es_MHytMrK1SpcGhdWLBW7chZhvSMvebdGK7oqGUtx9HcukQe0VNteFz7_dowKx0C5Gh=w254-h199-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLU6hLS9QKTYmooUXbWyyB-VupTtqqlpjEiBjxgL1xtfDh29Oy9P1uSm11IklmOAXexP5il_ZbIJjQXl9BB6MiJGk738lkw83gz9Cu-tmP0lpRljDQeDmEMpgVRw2Jx6Jg4I-YuLdw9ieMF_kQH01TCw=s225-no?authuser=0" alt="">
+    </div>
+
+    <h2>With Flex</h2>
+    <div class="box" id="b">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLV2aov2ep7umQyt9sQ5lEa7ByOyPgf6BKwo4Yj8u6SrvaZhGZCHma96cdj_YmUNiUsPlZFrtiGkj2sAzANzYMa3YnuxEK5-h0RugkKyAUDgw3COybQsu0osEiLHCV17Xq9OAl42-g6txwJMBn_Gz5sG=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLXSjKXAxAbq5xCd0c_WyyNzx1u_xNOsPZD-u5UtSwnoyiA6Z9UPArQfniUHFx-CQYFLfB1pVqx_5UKuQviVmIXydLueeQVi61Q2rDo7dFAqZU6zyknkar5IliWEm4jcN8MxbbcqWS0Of32qhH1POS4H=w221-h228-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLWa5gIG278v5U1O6NrauKIAwB0XxeZ0DNGfrO0-p98klVmwH-nbubaMFpjL3n40z-yGAHJPYT1azq53Np5gH0z4poaukxa8XwIlJlQkAWA0fsBNebjdESL5FYyIl56-PsSn6cbP-_dTRhZqEG8PIMEv=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLX6oi9YYukvjZ8UWgnLu7_47IuqoeTpVs7zoGclR_jtoKcpKkUzJF72-RtCj3Ftr26vzRESiL2NrD1CV7X2es_MHytMrK1SpcGhdWLBW7chZhvSMvebdGK7oqGUtx9HcukQe0VNteFz7_dowKx0C5Gh=w254-h199-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLU6hLS9QKTYmooUXbWyyB-VupTtqqlpjEiBjxgL1xtfDh29Oy9P1uSm11IklmOAXexP5il_ZbIJjQXl9BB6MiJGk738lkw83gz9Cu-tmP0lpRljDQeDmEMpgVRw2Jx6Jg4I-YuLdw9ieMF_kQH01TCw=s225-no?authuser=0" alt="">
+    </div>
+
+    <h2>Flex-direction : row</h2>
+    <div class="box" id="c">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLV2aov2ep7umQyt9sQ5lEa7ByOyPgf6BKwo4Yj8u6SrvaZhGZCHma96cdj_YmUNiUsPlZFrtiGkj2sAzANzYMa3YnuxEK5-h0RugkKyAUDgw3COybQsu0osEiLHCV17Xq9OAl42-g6txwJMBn_Gz5sG=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLXSjKXAxAbq5xCd0c_WyyNzx1u_xNOsPZD-u5UtSwnoyiA6Z9UPArQfniUHFx-CQYFLfB1pVqx_5UKuQviVmIXydLueeQVi61Q2rDo7dFAqZU6zyknkar5IliWEm4jcN8MxbbcqWS0Of32qhH1POS4H=w221-h228-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLWa5gIG278v5U1O6NrauKIAwB0XxeZ0DNGfrO0-p98klVmwH-nbubaMFpjL3n40z-yGAHJPYT1azq53Np5gH0z4poaukxa8XwIlJlQkAWA0fsBNebjdESL5FYyIl56-PsSn6cbP-_dTRhZqEG8PIMEv=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLX6oi9YYukvjZ8UWgnLu7_47IuqoeTpVs7zoGclR_jtoKcpKkUzJF72-RtCj3Ftr26vzRESiL2NrD1CV7X2es_MHytMrK1SpcGhdWLBW7chZhvSMvebdGK7oqGUtx9HcukQe0VNteFz7_dowKx0C5Gh=w254-h199-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLU6hLS9QKTYmooUXbWyyB-VupTtqqlpjEiBjxgL1xtfDh29Oy9P1uSm11IklmOAXexP5il_ZbIJjQXl9BB6MiJGk738lkw83gz9Cu-tmP0lpRljDQeDmEMpgVRw2Jx6Jg4I-YuLdw9ieMF_kQH01TCw=s225-no?authuser=0" alt="">
+    </div>
+
+    <h2>Flex-direction : coloum</h2>
+    <div class="box" id="d">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLV2aov2ep7umQyt9sQ5lEa7ByOyPgf6BKwo4Yj8u6SrvaZhGZCHma96cdj_YmUNiUsPlZFrtiGkj2sAzANzYMa3YnuxEK5-h0RugkKyAUDgw3COybQsu0osEiLHCV17Xq9OAl42-g6txwJMBn_Gz5sG=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLXSjKXAxAbq5xCd0c_WyyNzx1u_xNOsPZD-u5UtSwnoyiA6Z9UPArQfniUHFx-CQYFLfB1pVqx_5UKuQviVmIXydLueeQVi61Q2rDo7dFAqZU6zyknkar5IliWEm4jcN8MxbbcqWS0Of32qhH1POS4H=w221-h228-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLWa5gIG278v5U1O6NrauKIAwB0XxeZ0DNGfrO0-p98klVmwH-nbubaMFpjL3n40z-yGAHJPYT1azq53Np5gH0z4poaukxa8XwIlJlQkAWA0fsBNebjdESL5FYyIl56-PsSn6cbP-_dTRhZqEG8PIMEv=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLX6oi9YYukvjZ8UWgnLu7_47IuqoeTpVs7zoGclR_jtoKcpKkUzJF72-RtCj3Ftr26vzRESiL2NrD1CV7X2es_MHytMrK1SpcGhdWLBW7chZhvSMvebdGK7oqGUtx9HcukQe0VNteFz7_dowKx0C5Gh=w254-h199-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLU6hLS9QKTYmooUXbWyyB-VupTtqqlpjEiBjxgL1xtfDh29Oy9P1uSm11IklmOAXexP5il_ZbIJjQXl9BB6MiJGk738lkw83gz9Cu-tmP0lpRljDQeDmEMpgVRw2Jx6Jg4I-YuLdw9ieMF_kQH01TCw=s225-no?authuser=0" alt="">
+    </div>
+
+    <h2>Flex-direction : row reverse</h2>
+    <div class="box" id="e">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLV2aov2ep7umQyt9sQ5lEa7ByOyPgf6BKwo4Yj8u6SrvaZhGZCHma96cdj_YmUNiUsPlZFrtiGkj2sAzANzYMa3YnuxEK5-h0RugkKyAUDgw3COybQsu0osEiLHCV17Xq9OAl42-g6txwJMBn_Gz5sG=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLXSjKXAxAbq5xCd0c_WyyNzx1u_xNOsPZD-u5UtSwnoyiA6Z9UPArQfniUHFx-CQYFLfB1pVqx_5UKuQviVmIXydLueeQVi61Q2rDo7dFAqZU6zyknkar5IliWEm4jcN8MxbbcqWS0Of32qhH1POS4H=w221-h228-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLWa5gIG278v5U1O6NrauKIAwB0XxeZ0DNGfrO0-p98klVmwH-nbubaMFpjL3n40z-yGAHJPYT1azq53Np5gH0z4poaukxa8XwIlJlQkAWA0fsBNebjdESL5FYyIl56-PsSn6cbP-_dTRhZqEG8PIMEv=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLX6oi9YYukvjZ8UWgnLu7_47IuqoeTpVs7zoGclR_jtoKcpKkUzJF72-RtCj3Ftr26vzRESiL2NrD1CV7X2es_MHytMrK1SpcGhdWLBW7chZhvSMvebdGK7oqGUtx9HcukQe0VNteFz7_dowKx0C5Gh=w254-h199-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLU6hLS9QKTYmooUXbWyyB-VupTtqqlpjEiBjxgL1xtfDh29Oy9P1uSm11IklmOAXexP5il_ZbIJjQXl9BB6MiJGk738lkw83gz9Cu-tmP0lpRljDQeDmEMpgVRw2Jx6Jg4I-YuLdw9ieMF_kQH01TCw=s225-no?authuser=0" alt="">
+    </div>
+
+    <h2>Justify-content: space-around</h2>
+    <div class="box" id="f">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLV2aov2ep7umQyt9sQ5lEa7ByOyPgf6BKwo4Yj8u6SrvaZhGZCHma96cdj_YmUNiUsPlZFrtiGkj2sAzANzYMa3YnuxEK5-h0RugkKyAUDgw3COybQsu0osEiLHCV17Xq9OAl42-g6txwJMBn_Gz5sG=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLXSjKXAxAbq5xCd0c_WyyNzx1u_xNOsPZD-u5UtSwnoyiA6Z9UPArQfniUHFx-CQYFLfB1pVqx_5UKuQviVmIXydLueeQVi61Q2rDo7dFAqZU6zyknkar5IliWEm4jcN8MxbbcqWS0Of32qhH1POS4H=w221-h228-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLWa5gIG278v5U1O6NrauKIAwB0XxeZ0DNGfrO0-p98klVmwH-nbubaMFpjL3n40z-yGAHJPYT1azq53Np5gH0z4poaukxa8XwIlJlQkAWA0fsBNebjdESL5FYyIl56-PsSn6cbP-_dTRhZqEG8PIMEv=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLX6oi9YYukvjZ8UWgnLu7_47IuqoeTpVs7zoGclR_jtoKcpKkUzJF72-RtCj3Ftr26vzRESiL2NrD1CV7X2es_MHytMrK1SpcGhdWLBW7chZhvSMvebdGK7oqGUtx9HcukQe0VNteFz7_dowKx0C5Gh=w254-h199-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLU6hLS9QKTYmooUXbWyyB-VupTtqqlpjEiBjxgL1xtfDh29Oy9P1uSm11IklmOAXexP5il_ZbIJjQXl9BB6MiJGk738lkw83gz9Cu-tmP0lpRljDQeDmEMpgVRw2Jx6Jg4I-YuLdw9ieMF_kQH01TCw=s225-no?authuser=0" alt="">
+    </div>
+
+    <h2>Justify-content: space-between</h2>
+    <div class="box" id="g">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLV2aov2ep7umQyt9sQ5lEa7ByOyPgf6BKwo4Yj8u6SrvaZhGZCHma96cdj_YmUNiUsPlZFrtiGkj2sAzANzYMa3YnuxEK5-h0RugkKyAUDgw3COybQsu0osEiLHCV17Xq9OAl42-g6txwJMBn_Gz5sG=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLXSjKXAxAbq5xCd0c_WyyNzx1u_xNOsPZD-u5UtSwnoyiA6Z9UPArQfniUHFx-CQYFLfB1pVqx_5UKuQviVmIXydLueeQVi61Q2rDo7dFAqZU6zyknkar5IliWEm4jcN8MxbbcqWS0Of32qhH1POS4H=w221-h228-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLWa5gIG278v5U1O6NrauKIAwB0XxeZ0DNGfrO0-p98klVmwH-nbubaMFpjL3n40z-yGAHJPYT1azq53Np5gH0z4poaukxa8XwIlJlQkAWA0fsBNebjdESL5FYyIl56-PsSn6cbP-_dTRhZqEG8PIMEv=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLX6oi9YYukvjZ8UWgnLu7_47IuqoeTpVs7zoGclR_jtoKcpKkUzJF72-RtCj3Ftr26vzRESiL2NrD1CV7X2es_MHytMrK1SpcGhdWLBW7chZhvSMvebdGK7oqGUtx9HcukQe0VNteFz7_dowKx0C5Gh=w254-h199-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLU6hLS9QKTYmooUXbWyyB-VupTtqqlpjEiBjxgL1xtfDh29Oy9P1uSm11IklmOAXexP5il_ZbIJjQXl9BB6MiJGk738lkw83gz9Cu-tmP0lpRljDQeDmEMpgVRw2Jx6Jg4I-YuLdw9ieMF_kQH01TCw=s225-no?authuser=0" alt="">
+    </div>
+
+    <h2>align-items : center</h2>
+    <div class="box" id="h">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLV2aov2ep7umQyt9sQ5lEa7ByOyPgf6BKwo4Yj8u6SrvaZhGZCHma96cdj_YmUNiUsPlZFrtiGkj2sAzANzYMa3YnuxEK5-h0RugkKyAUDgw3COybQsu0osEiLHCV17Xq9OAl42-g6txwJMBn_Gz5sG=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLXSjKXAxAbq5xCd0c_WyyNzx1u_xNOsPZD-u5UtSwnoyiA6Z9UPArQfniUHFx-CQYFLfB1pVqx_5UKuQviVmIXydLueeQVi61Q2rDo7dFAqZU6zyknkar5IliWEm4jcN8MxbbcqWS0Of32qhH1POS4H=w221-h228-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLWa5gIG278v5U1O6NrauKIAwB0XxeZ0DNGfrO0-p98klVmwH-nbubaMFpjL3n40z-yGAHJPYT1azq53Np5gH0z4poaukxa8XwIlJlQkAWA0fsBNebjdESL5FYyIl56-PsSn6cbP-_dTRhZqEG8PIMEv=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLX6oi9YYukvjZ8UWgnLu7_47IuqoeTpVs7zoGclR_jtoKcpKkUzJF72-RtCj3Ftr26vzRESiL2NrD1CV7X2es_MHytMrK1SpcGhdWLBW7chZhvSMvebdGK7oqGUtx9HcukQe0VNteFz7_dowKx0C5Gh=w254-h199-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLU6hLS9QKTYmooUXbWyyB-VupTtqqlpjEiBjxgL1xtfDh29Oy9P1uSm11IklmOAXexP5il_ZbIJjQXl9BB6MiJGk738lkw83gz9Cu-tmP0lpRljDQeDmEMpgVRw2Jx6Jg4I-YuLdw9ieMF_kQH01TCw=s225-no?authuser=0" alt="">
+    </div>
+
+    <h2>align-items:stretch</h2>
+    <div class="box" id="i">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLV2aov2ep7umQyt9sQ5lEa7ByOyPgf6BKwo4Yj8u6SrvaZhGZCHma96cdj_YmUNiUsPlZFrtiGkj2sAzANzYMa3YnuxEK5-h0RugkKyAUDgw3COybQsu0osEiLHCV17Xq9OAl42-g6txwJMBn_Gz5sG=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLXSjKXAxAbq5xCd0c_WyyNzx1u_xNOsPZD-u5UtSwnoyiA6Z9UPArQfniUHFx-CQYFLfB1pVqx_5UKuQviVmIXydLueeQVi61Q2rDo7dFAqZU6zyknkar5IliWEm4jcN8MxbbcqWS0Of32qhH1POS4H=w221-h228-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLWa5gIG278v5U1O6NrauKIAwB0XxeZ0DNGfrO0-p98klVmwH-nbubaMFpjL3n40z-yGAHJPYT1azq53Np5gH0z4poaukxa8XwIlJlQkAWA0fsBNebjdESL5FYyIl56-PsSn6cbP-_dTRhZqEG8PIMEv=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLX6oi9YYukvjZ8UWgnLu7_47IuqoeTpVs7zoGclR_jtoKcpKkUzJF72-RtCj3Ftr26vzRESiL2NrD1CV7X2es_MHytMrK1SpcGhdWLBW7chZhvSMvebdGK7oqGUtx9HcukQe0VNteFz7_dowKx0C5Gh=w254-h199-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLU6hLS9QKTYmooUXbWyyB-VupTtqqlpjEiBjxgL1xtfDh29Oy9P1uSm11IklmOAXexP5il_ZbIJjQXl9BB6MiJGk738lkw83gz9Cu-tmP0lpRljDQeDmEMpgVRw2Jx6Jg4I-YuLdw9ieMF_kQH01TCw=s225-no?authuser=0" alt="">
+    </div>
+
+    <h2>flex-direction:column reverse</h2>
+    <div class="box" id="j">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLV2aov2ep7umQyt9sQ5lEa7ByOyPgf6BKwo4Yj8u6SrvaZhGZCHma96cdj_YmUNiUsPlZFrtiGkj2sAzANzYMa3YnuxEK5-h0RugkKyAUDgw3COybQsu0osEiLHCV17Xq9OAl42-g6txwJMBn_Gz5sG=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLXSjKXAxAbq5xCd0c_WyyNzx1u_xNOsPZD-u5UtSwnoyiA6Z9UPArQfniUHFx-CQYFLfB1pVqx_5UKuQviVmIXydLueeQVi61Q2rDo7dFAqZU6zyknkar5IliWEm4jcN8MxbbcqWS0Of32qhH1POS4H=w221-h228-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLWa5gIG278v5U1O6NrauKIAwB0XxeZ0DNGfrO0-p98klVmwH-nbubaMFpjL3n40z-yGAHJPYT1azq53Np5gH0z4poaukxa8XwIlJlQkAWA0fsBNebjdESL5FYyIl56-PsSn6cbP-_dTRhZqEG8PIMEv=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLX6oi9YYukvjZ8UWgnLu7_47IuqoeTpVs7zoGclR_jtoKcpKkUzJF72-RtCj3Ftr26vzRESiL2NrD1CV7X2es_MHytMrK1SpcGhdWLBW7chZhvSMvebdGK7oqGUtx9HcukQe0VNteFz7_dowKx0C5Gh=w254-h199-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLU6hLS9QKTYmooUXbWyyB-VupTtqqlpjEiBjxgL1xtfDh29Oy9P1uSm11IklmOAXexP5il_ZbIJjQXl9BB6MiJGk738lkw83gz9Cu-tmP0lpRljDQeDmEMpgVRw2Jx6Jg4I-YuLdw9ieMF_kQH01TCw=s225-no?authuser=0" alt="">
+    </div>
+
+    <h2>Justify-content: center</h2>
+    <div class="box" id="k">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLV2aov2ep7umQyt9sQ5lEa7ByOyPgf6BKwo4Yj8u6SrvaZhGZCHma96cdj_YmUNiUsPlZFrtiGkj2sAzANzYMa3YnuxEK5-h0RugkKyAUDgw3COybQsu0osEiLHCV17Xq9OAl42-g6txwJMBn_Gz5sG=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLXSjKXAxAbq5xCd0c_WyyNzx1u_xNOsPZD-u5UtSwnoyiA6Z9UPArQfniUHFx-CQYFLfB1pVqx_5UKuQviVmIXydLueeQVi61Q2rDo7dFAqZU6zyknkar5IliWEm4jcN8MxbbcqWS0Of32qhH1POS4H=w221-h228-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLWa5gIG278v5U1O6NrauKIAwB0XxeZ0DNGfrO0-p98klVmwH-nbubaMFpjL3n40z-yGAHJPYT1azq53Np5gH0z4poaukxa8XwIlJlQkAWA0fsBNebjdESL5FYyIl56-PsSn6cbP-_dTRhZqEG8PIMEv=s225-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLX6oi9YYukvjZ8UWgnLu7_47IuqoeTpVs7zoGclR_jtoKcpKkUzJF72-RtCj3Ftr26vzRESiL2NrD1CV7X2es_MHytMrK1SpcGhdWLBW7chZhvSMvebdGK7oqGUtx9HcukQe0VNteFz7_dowKx0C5Gh=w254-h199-no?authuser=0" alt="">
+        <img src="https://lh3.googleusercontent.com/pw/AM-JKLU6hLS9QKTYmooUXbWyyB-VupTtqqlpjEiBjxgL1xtfDh29Oy9P1uSm11IklmOAXexP5il_ZbIJjQXl9BB6MiJGk738lkw83gz9Cu-tmP0lpRljDQeDmEMpgVRw2Jx6Jg4I-YuLdw9ieMF_kQH01TCw=s225-no?authuser=0" alt="">
+    </div>
+
+    
+</body>
+</html>
